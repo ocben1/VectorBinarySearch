@@ -108,19 +108,19 @@ namespace Vector
         //{
         //    throw new NotImplementedException();
         //}
-        private int BinarySearch(T val, int left, int right, IComparer<T> comparer)
+        private int BinarySearch(T element, int left, int right, IComparer<T> comparer)
         {
             if (comparer == null) comparer = Comparer<T>.Default;
             if (left <= right)
             {
                 int mid = (left + right) / 2;
-                int result = comparer.Compare(val, data[mid]);
+                int result = comparer.Compare(element, data[mid]);
                 if (result == 0)
                     return mid;
                 if (result < 0)
-                    return BinarySearch(val, left, mid - 1, comparer);
+                    return BinarySearch(element, left, mid - 1, comparer);
                 if (result > 0)
-                    return BinarySearch(val, mid + 1, right, comparer);
+                    return BinarySearch(element, mid + 1, right, comparer);
             }
             return -1;
 
