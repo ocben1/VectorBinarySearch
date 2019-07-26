@@ -103,11 +103,6 @@ namespace Vector
             else Sorter.Sort(data, comparer);
         }
 
-        // TODO: Your task is to implement all the remaining methods.
-        //public int BinarySearch(T element, IComparer<T> comparer)
-        //{
-        //    throw new NotImplementedException();
-        //}
         private int BinarySearch(T element, int left, int right, IComparer<T> comparer)
         {
             if (comparer == null) comparer = Comparer<T>.Default;
