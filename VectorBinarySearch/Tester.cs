@@ -61,7 +61,7 @@ namespace Vector
 
             Vector<int> vector = new Vector<int>(problem_size);
 
-            // ------------------ BinarySearch ----------------------------------
+            // ------------------ BinarySearch ----------------------------------//
             int[] temp = null; int check;
 
             try
